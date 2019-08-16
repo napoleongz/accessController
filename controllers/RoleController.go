@@ -3,8 +3,8 @@ package controllers
 import (
 	"encoding/json"
 
-	"github.com/lhtzbj12/sdrms/enums"
-	"github.com/lhtzbj12/sdrms/models"
+	"accessController/enums"
+	"accessController/models"
 
 	"fmt"
 	"strconv"

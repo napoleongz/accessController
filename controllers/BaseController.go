@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/lhtzbj12/sdrms/enums"
-	"github.com/lhtzbj12/sdrms/models"
-	"github.com/lhtzbj12/sdrms/utils"
+	"accessController/enums"
+	"accessController/models"
+	"accessController/utils"
 
 	"github.com/astaxie/beego"
 )

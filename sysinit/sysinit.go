@@ -1,7 +1,7 @@
 package sysinit
 
 import (
-	"github.com/lhtzbj12/sdrms/utils"
+	"accessController/utils"
 
 	"github.com/astaxie/beego"
 )
