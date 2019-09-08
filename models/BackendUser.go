@@ -8,7 +8,18 @@ import (
 func (a *BackendUser) TableName() string {
 	return BackendUserTBName()
 }
-
+//用户信息实体类
+type AcUser struct {
+	Id int
+	UserName string
+	Password string
+	IsDel int
+	UserType string
+	CreateDate string
+	ModifyDate string
+	CreateBy string
+	ModifyBy string
+}
 // BackendUserQueryParam 用于查询的类
 type BackendUserQueryParam struct {
 	BaseQueryParam
@@ -80,3 +91,14 @@ func BackendUserOneByUserName(username, userpwd string) (*BackendUser, error) {
 	}
 	return &m, nil
 }
+
+func LoginByUserName(username, password string) (*AcUser, error) {
+	au := AcUser{}
+	err := orm.NewOrm().QueryTable(au).Filter("username", username).Filter("password", password).One(&au)
+	if err != nil {
+		return nil, err
+	}
+	return &au, nil
+}
+
+

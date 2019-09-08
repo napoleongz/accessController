@@ -52,4 +52,6 @@ func init() {
 
 	beego.Router("/", &controllers.HomeController{}, "*:Index")
 
+	beego.Router("/access", &controllers.AccessController{}, "Post:GetAccess")
+
 }
